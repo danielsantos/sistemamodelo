@@ -10,19 +10,18 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.danrock.model.Usuario;
+import com.danrock.repository.UsuarioRepository;
 
 @Controller
 @RequestMapping("/usuario")
 public class UsuarioController {
+	
+	@Autowired
+	private UsuarioRepository repository;
 
 	@GetMapping
 	public ModelAndView listar() {
-		List<Usuario> lista = new ArrayList<Usuario>();
-		Usuario usuario = new Usuario();
-		usuario.setId(1l);
-		usuario.setNome("Fulano");
-
-		lista.add(usuario);
+		List<Usuario> lista = repository.findAll();
 		
 		ModelAndView modelAndView = new ModelAndView("usuarios");
 		modelAndView.addObject("usuarios", lista);
