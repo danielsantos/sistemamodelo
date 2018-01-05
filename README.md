@@ -1,16 +1,24 @@
 # Sistema Modelo
 
-Java EE
+Java EE<br>
+Spring Boot e Thymeleaf<br>
+Database MySQL
 
-Desenvolvido com Spring Boot e Thymeleaf
+## Functionalities
 
-Banco de Dados MySQL
-
-## Funcionalidades
-
- - CRUD de Usuários
+ - Login
+ - Users CRUD
  
-## Execução
+## Usage
+
+Build and Run:
 
         mvn clean
         mvn spring-boot:run
+        
+Preview at:        
+
+        http://localhost:8080/sistemamodelo/
+        
+        User:     user
+        Password: a
